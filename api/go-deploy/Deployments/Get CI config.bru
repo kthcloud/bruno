@@ -1,0 +1,15 @@
+meta {
+  name: Get CI config
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{api-url-v1}}/deployments/{{deployment-id}}/ciConfig
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer-token}}
+}

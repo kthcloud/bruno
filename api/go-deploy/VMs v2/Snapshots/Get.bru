@@ -1,0 +1,15 @@
+meta {
+  name: Get
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{api-url-v2}}/snapshots?vmId={{vm-id}}
+  body: none
+  auth: none
+}
+
+query {
+  vmId: {{vm-id}}
+}

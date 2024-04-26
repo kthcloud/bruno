@@ -1,0 +1,25 @@
+meta {
+  name: Update
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{api-url-v1}}/teams/{{team-id}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "description": "a new description",
+      "resources": [
+          "{{vm-id}}"
+      ],
+      "members": [
+          {
+              "id": "{{user-id-2}}"
+          }
+      ]
+  }
+}

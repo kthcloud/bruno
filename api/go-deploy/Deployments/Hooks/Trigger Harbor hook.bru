@@ -1,0 +1,26 @@
+meta {
+  name: Trigger Harbor hook
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{api-url-v1}}/hooks/deployments/harbor
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Basic Y2xvdWQ6QmhpNEZMS1BXQmJPaGhzNTF0d3NjeFl2elJjdXRybHVmMGJKVHhBSE1NWT0=
+}
+
+body:json {
+  {
+      "type": "PUSH_ARTIFACT",
+      "event_data": {
+          "repository": {
+              "name": "local-test"
+          }
+      }
+  }
+}

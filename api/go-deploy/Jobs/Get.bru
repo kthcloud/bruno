@@ -1,0 +1,15 @@
+meta {
+  name: Get
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{api-url-v1}}/jobs?all=true
+  body: none
+  auth: none
+}
+
+query {
+  all: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api-url-v1}}/deployments
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer-token}}
+}
+
+body:json {
+  {
+      "name": "local-test",
+      "image": "nginx:latest",
+      "envs": [
+          {
+              "name": "PORT",
+              "value": "80"
+          }
+      ]
+  }
+}

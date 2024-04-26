@@ -1,0 +1,21 @@
+meta {
+  name: Command
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{api-url-v1}}/deployments/{{deployment-id}}/command
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer-token}}
+}
+
+body:json {
+  {
+      "command": "restart"
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: Get logs
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{api-url-v1}}/deployments/{{deployment-id}}/logs-sse
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer-token}}
+}

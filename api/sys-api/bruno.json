@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "sys-api",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

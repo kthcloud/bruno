@@ -1,0 +1,22 @@
+meta {
+  name: Get Token
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{auth-url}}/realms/cloud/protocol/openid-connect/token
+  body: formUrlEncoded
+  auth: none
+}
+
+body:form-urlencoded {
+  grant_type: password
+  client_id: deploy
+  username: emil
+  password: BczG8REiNGXktr6
+}
+
+vars:post-response {
+  bearer-token: res.body.access_token
+}

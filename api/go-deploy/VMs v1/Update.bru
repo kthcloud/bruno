@@ -1,0 +1,26 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{api-url-v1}}/vms/{{vm-id}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "ports": [
+          {
+              "name": "api",
+              "port": 8080,
+              "protocol": "tcp",
+              "httpProxy": {
+                  "name": "wikipedia-api"
+              }
+          }
+      ]
+  }
+}

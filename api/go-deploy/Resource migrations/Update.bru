@@ -1,0 +1,17 @@
+meta {
+  name: Update
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{api-url-v1}}/resourceMigrations/{{resource-migration-id}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "status": "ready"
+  }
+}

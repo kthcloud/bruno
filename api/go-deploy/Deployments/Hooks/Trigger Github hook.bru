@@ -1,0 +1,210 @@
+meta {
+  name: Trigger Github hook
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api-url-v1}}/hooks/deployments/github?=push
+  body: json
+  auth: none
+}
+
+query {
+  : push
+}
+
+headers {
+  X-GitHub-Event: push
+  X-GitHub-Hook-ID: 418728525
+  X-Hub-Signature-256: sha256=5ec7117e162f76a509cb0903c571838cd876caddb520e8257358b80945dd9af5
+}
+
+body:json {
+  {
+      "ref": "refs/heads/main",
+      "before": "30c2538880b4a160254e4148ce3da3de270aa292",
+      "after": "09a26ce83089e2cdafee0cff74ef3ac117d1489b",
+      "repository": {
+          "id": 590636913,
+          "node_id": "R_kgDOIzRncQ",
+          "name": "go-deploy-placeholder",
+          "full_name": "saffronjam/go-deploy-placeholder",
+          "private": false,
+          "owner": {
+              "name": "saffronjam",
+              "email": "own.emka@gmail.com",
+              "login": "saffronjam",
+              "id": 26722370,
+              "node_id": "MDQ6VXNlcjI2NzIyMzcw",
+              "avatar_url": "https:/avatars.githubusercontent.com/u/26722370?v=4",
+              "gravatar_id": "",
+              "url": "https:/api.github.com/users/saffronjam",
+              "html_url": "https:/github.com/saffronjam",
+              "followers_url": "https:/api.github.com/users/saffronjam/followers",
+              "following_url": "https:/api.github.com/users/saffronjam/following{/other_user}",
+              "gists_url": "https:/api.github.com/users/saffronjam/gists{/gist_id}",
+              "starred_url": "https:/api.github.com/users/saffronjam/starred{/owner}{/repo}",
+              "subscriptions_url": "https:/api.github.com/users/saffronjam/subscriptions",
+              "organizations_url": "https:/api.github.com/users/saffronjam/orgs",
+              "repos_url": "https:/api.github.com/users/saffronjam/repos",
+              "events_url": "https:/api.github.com/users/saffronjam/events{/privacy}",
+              "received_events_url": "https:/api.github.com/users/saffronjam/received_events",
+              "type": "User",
+              "site_admin": false
+          },
+          "html_url": "https:/github.com/saffronjam/go-deploy-placeholder",
+          "description": null,
+          "fork": true,
+          "url": "https:/github.com/saffronjam/go-deploy-placeholder",
+          "forks_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/forks",
+          "keys_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/keys{/key_id}",
+          "collaborators_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/collaborators{/collaborator}",
+          "teams_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/teams",
+          "hooks_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/hooks",
+          "issue_events_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/issues/events{/number}",
+          "events_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/events",
+          "assignees_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/assignees{/user}",
+          "branches_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/branches{/branch}",
+          "tags_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/tags",
+          "blobs_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/git/blobs{/sha}",
+          "git_tags_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/git/tags{/sha}",
+          "git_refs_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/git/refs{/sha}",
+          "trees_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/git/trees{/sha}",
+          "statuses_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/statuses/{sha}",
+          "languages_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/languages",
+          "stargazers_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/stargazers",
+          "contributors_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/contributors",
+          "subscribers_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/subscribers",
+          "subscription_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/subscription",
+          "commits_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/commits{/sha}",
+          "git_commits_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/git/commits{/sha}",
+          "comments_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/comments{/number}",
+          "issue_comment_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/issues/comments{/number}",
+          "contents_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/contents/{+path}",
+          "compare_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/compare/{base}...{head}",
+          "merges_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/merges",
+          "archive_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/{archive_format}{/ref}",
+          "downloads_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/downloads",
+          "issues_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/issues{/number}",
+          "pulls_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/pulls{/number}",
+          "milestones_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/milestones{/number}",
+          "notifications_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/notifications{?since,all,participating}",
+          "labels_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/labels{/name}",
+          "releases_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/releases{/id}",
+          "deployments_url": "https:/api.github.com/repos/saffronjam/go-deploy-placeholder/deployments",
+          "created_at": 1674077166,
+          "updated_at": "2023-01-18T21:29:03Z",
+          "pushed_at": 1698601549,
+          "git_url": "git:/github.com/saffronjam/go-deploy-placeholder.git",
+          "ssh_url": "git@github.com:saffronjam/go-deploy-placeholder.git",
+          "clone_url": "https:/github.com/saffronjam/go-deploy-placeholder.git",
+          "svn_url": "https:/github.com/saffronjam/go-deploy-placeholder",
+          "homepage": null,
+          "size": 109,
+          "stargazers_count": 0,
+          "watchers_count": 0,
+          "language": "HTML",
+          "has_issues": false,
+          "has_projects": true,
+          "has_downloads": true,
+          "has_wiki": true,
+          "has_pages": false,
+          "has_discussions": false,
+          "forks_count": 0,
+          "mirror_url": null,
+          "archived": false,
+          "disabled": false,
+          "open_issues_count": 0,
+          "license": null,
+          "allow_forking": true,
+          "is_template": false,
+          "web_commit_signoff_required": false,
+          "topics": [],
+          "visibility": "public",
+          "forks": 0,
+          "open_issues": 0,
+          "watchers": 0,
+          "default_branch": "main",
+          "stargazers": 0,
+          "master_branch": "main"
+      },
+      "pusher": {
+          "name": "saffronjam",
+          "email": "own.emka@gmail.com"
+      },
+      "sender": {
+          "login": "saffronjam",
+          "id": 26722370,
+          "node_id": "MDQ6VXNlcjI2NzIyMzcw",
+          "avatar_url": "https:/avatars.githubusercontent.com/u/26722370?v=4",
+          "gravatar_id": "",
+          "url": "https:/api.github.com/users/saffronjam",
+          "html_url": "https:/github.com/saffronjam",
+          "followers_url": "https:/api.github.com/users/saffronjam/followers",
+          "following_url": "https:/api.github.com/users/saffronjam/following{/other_user}",
+          "gists_url": "https:/api.github.com/users/saffronjam/gists{/gist_id}",
+          "starred_url": "https:/api.github.com/users/saffronjam/starred{/owner}{/repo}",
+          "subscriptions_url": "https:/api.github.com/users/saffronjam/subscriptions",
+          "organizations_url": "https:/api.github.com/users/saffronjam/orgs",
+          "repos_url": "https:/api.github.com/users/saffronjam/repos",
+          "events_url": "https:/api.github.com/users/saffronjam/events{/privacy}",
+          "received_events_url": "https:/api.github.com/users/saffronjam/received_events",
+          "type": "User",
+          "site_admin": false
+      },
+      "created": false,
+      "deleted": false,
+      "forced": false,
+      "base_ref": null,
+      "compare": "https:/github.com/saffronjam/go-deploy-placeholder/compare/30c2538880b4...09a26ce83089",
+      "commits": [
+          {
+              "id": "09a26ce83089e2cdafee0cff74ef3ac117d1489b",
+              "tree_id": "f45c1f0ebb9812c321e6f6bd9fc6cc3ba894c21a",
+              "distinct": true,
+              "message": "Update README.md",
+              "timestamp": "2023-10-29T18:45:49+01:00",
+              "url": "https:/github.com/saffronjam/go-deploy-placeholder/commit/09a26ce83089e2cdafee0cff74ef3ac117d1489b",
+              "author": {
+                  "name": "Emil Karlsson",
+                  "email": "own.emka@gmail.com",
+                  "username": "saffronjam"
+              },
+              "committer": {
+                  "name": "GitHub",
+                  "email": "noreply@github.com",
+                  "username": "web-flow"
+              },
+              "added": [],
+              "removed": [],
+              "modified": [
+                  "README.md"
+              ]
+          }
+      ],
+      "head_commit": {
+          "id": "09a26ce83089e2cdafee0cff74ef3ac117d1489b",
+          "tree_id": "f45c1f0ebb9812c321e6f6bd9fc6cc3ba894c21a",
+          "distinct": true,
+          "message": "Update README.md",
+          "timestamp": "2023-10-29T18:45:49+01:00",
+          "url": "https:/github.com/saffronjam/go-deploy-placeholder/commit/09a26ce83089e2cdafee0cff74ef3ac117d1489b",
+          "author": {
+              "name": "Emil Karlsson",
+              "email": "own.emka@gmail.com",
+              "username": "saffronjam"
+          },
+          "committer": {
+              "name": "GitHub",
+              "email": "noreply@github.com",
+              "username": "web-flow"
+          },
+          "added": [],
+          "removed": [],
+          "modified": [
+              "README.md"
+          ]
+      }
+  }
+}

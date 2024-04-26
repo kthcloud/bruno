@@ -1,0 +1,15 @@
+meta {
+  name: Delete
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{api-url-v1}}/deployments/{{deployment-id}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{bearer-token}}
+}

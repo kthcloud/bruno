@@ -1,0 +1,17 @@
+meta {
+  name: Update
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api-url-v1}}/notifications/{{NOTIFICATION_iD}}
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "read": false
+  }
+}

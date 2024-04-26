@@ -1,0 +1,15 @@
+meta {
+  name: Get
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{api-url-v1}}/gpus?available=false
+  body: none
+  auth: none
+}
+
+query {
+  available: false
+}

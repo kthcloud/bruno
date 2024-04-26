@@ -1,0 +1,15 @@
+meta {
+  name: Get repositories
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{api-url-v1}}/github/repositories?code=b801d1c40dde4c5c6a70
+  body: none
+  auth: none
+}
+
+query {
+  code: b801d1c40dde4c5c6a70
+}

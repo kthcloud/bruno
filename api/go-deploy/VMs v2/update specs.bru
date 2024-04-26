@@ -1,0 +1,18 @@
+meta {
+  name: update specs
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{api-url-v1}}/vms/de014757-2a26-41a0-aa25-8035bf121957
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "cpuCores": 96,
+      "ram": 1000
+  }
+}

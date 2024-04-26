@@ -1,0 +1,18 @@
+meta {
+  name: Create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{api-url-v1}}/userData
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+      "id": "helo",
+      "data": "on this account"
+  }
+}

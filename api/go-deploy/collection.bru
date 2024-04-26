@@ -1,0 +1,14 @@
+auth {
+  mode: oauth2
+}
+
+auth:oauth2 {
+  grant_type: authorization_code
+  callback_url: http://auth
+  authorization_url: https://iam.cloud.cbh.kth.se/realms/cloud/protocol/openid-connect/auth
+  access_token_url: https://iam.cloud.cbh.kth.se/realms/cloud/protocol/openid-connect/token
+  client_id: deploy
+  client_secret: 
+  scope: offline_access
+  pkce: false
+}
